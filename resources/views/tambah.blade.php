@@ -18,6 +18,16 @@
                 name="alamat" value="{{ old('alamat') }}">
         </div>
 
+        <div class="form-group">
+            <label for="exampleInputEmail1">Sekolah</label>
+            <select class="custom-select" name="sekolah_id">
+                {{-- <option selected>Open this select menu</option> --}}
+                @foreach ($sekolah as $item)
+                    <option value="{{ $item->id }}">{{ $item->nama_sekolah }}</option>
+                @endforeach
+            </select>
+        </div>
+
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 @endsection
